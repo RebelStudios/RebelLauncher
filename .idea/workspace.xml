@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="129456d7-99c4-4848-a8c1-504cf49fda11" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download/Downloader.java" afterPath="$PROJECT_DIR$/download/Downloader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download/Verifier.java" afterPath="$PROJECT_DIR$/download/Verifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/commons_io_2_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/commons_io_2_4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RebelLauncher.iws" />
@@ -32,8 +29,8 @@
       <file leaf-file-name="Downloader.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/download/Downloader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2550505" vertical-offset="681" max-vertical-offset="1139">
-              <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.16919191" vertical-offset="664" max-vertical-offset="1122">
+              <caret line="55" column="70" selection-start-line="55" selection-start-column="70" selection-end-line="55" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -321,7 +318,11 @@
       <created>1401743211838</created>
       <updated>1401743211838</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixing downloader">
+      <created>1401749170897</created>
+      <updated>1401749170897</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -369,7 +370,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Moved to IDEA" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved to IDEA" />
+    <MESSAGE value="Fixing downloader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing downloader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -399,8 +401,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/download/Downloader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2550505" vertical-offset="681" max-vertical-offset="1139">
-          <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.16919191" vertical-offset="664" max-vertical-offset="1122">
+          <caret line="55" column="70" selection-start-line="55" selection-start-column="70" selection-end-line="55" selection-end-column="70" />
           <folding />
         </state>
       </provider>

@@ -54,7 +54,6 @@ public class Downloader {
      */
 
     public static void downloadFile(URL url, File dest, String hash) {
-//        TODO: Friggin' fix this thing.
         try {
             if (url.getFile().contains(".")) {
                 copyURLToFile(url, dest);
