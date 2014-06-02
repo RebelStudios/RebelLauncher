@@ -56,8 +56,7 @@ public class Downloader {
     public static void downloadFile(URL url, File dest, String hash) {
 //        TODO: Friggin' fix this thing.
         try {
-            HttpURLConnection huc = (HttpURLConnection) url.openConnection();
-            if (huc.getResponseCode() == HttpURLConnection.HTTP_ACCEPTED) {
+            if (url.getFile().contains(".")) {
                 copyURLToFile(url, dest);
                 Verifier.verifyFile(dest, hash.replaceAll("\"", ""));
             } else {
@@ -67,7 +66,7 @@ public class Downloader {
             System.out.println("Failed to download requested file! Are you connected to the internet?");
         } catch (IOException e) {
             System.out.println("We appear to have a problem.");
-//            e.printStackTrace();
+            e.printStackTrace();
         }
 
     }
