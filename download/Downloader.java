@@ -68,8 +68,6 @@ public class Downloader {
         } catch (IOException e) {
             System.out.println("We appear to have a problem.");
             e.printStackTrace();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
         }
 
     }

@@ -21,6 +21,7 @@ public class Verifier {
     public static boolean verifyFile(File fileToVerify, String checksum) throws IOException {
         StringBuffer hashBuffer = new StringBuffer();
 
+//        TODO: Fix this. It's weird. The checksums aren't even the same length.
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-1");
             FileInputStream fis = new FileInputStream(fileToVerify);
@@ -32,15 +33,12 @@ public class Verifier {
                 md.update(bytes, 0, i);
             }
 
-            byte[] digestBytes = md.digest();
-
-            for (int j = 0; j < digestBytes.length; j++) {
-                hashBuffer.append(Integer.toString((digestBytes[i] & 0xff) + 0x100, 16).substring(1));
+//            byte[] digestBytes = md.digest();
+            for (int j = 0; j < md.digest().length; j++) {
+                hashBuffer.append(Integer.toString((md.digest()[j] & 0xff) + 0x100, 16).substring(1));
             }
 
-            if (fis != null) {
-                fis.close();
-            }
+            fis.close();
 
             System.out.println("[Verifier] Expected checksum " + checksum + " and got checksum " + hashBuffer.toString());
         } catch (NoSuchAlgorithmException e) {
