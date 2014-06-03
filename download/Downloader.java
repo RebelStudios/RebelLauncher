@@ -34,9 +34,9 @@ public class Downloader {
         File dest;
         int i = 0;
         while (i < resource.resources.size()) {
-            dest = new File("C:\\Users\\misterti.me\\Desktop\\XML\\assets\\" + resource.resources.get(i).file.replaceAll("/", "\\\\"));
+            dest = new File("C:\\Users\\misterti.me\\Desktop\\XML\\assets\\" + resource.resources.get(i).file.replaceAll("/", File.separator));
 
-            System.out.println("Downloading http://s3.amazonaws.com/MinecraftResources/" + resource.resources.get(i).file);
+            System.out.println("[Install Assets] Downloading http://s3.amazonaws.com/MinecraftResources/" + resource.resources.get(i).file);
             downloadFile(new URL("http://s3.amazonaws.com/MinecraftResources/"
                             + resource.resources.get(i).file), dest, resource.resources.get(i).hash);
             i++;
