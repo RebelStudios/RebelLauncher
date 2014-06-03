@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="129456d7-99c4-4848-a8c1-504cf49fda11" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Git\RebelLauncher\lib\commons-codec-1.9.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download/Verifier.java" afterPath="$PROJECT_DIR$/download/Verifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RebelLauncher.iws" />
@@ -355,7 +354,11 @@
       <created>1401816633617</created>
       <updated>1401816633617</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Removed Commons Codec jar">
+      <created>1401820088840</created>
+      <updated>1401820088840</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -406,7 +409,8 @@
     <MESSAGE value="Fixing downloader" />
     <MESSAGE value="Fixed downloader" />
     <MESSAGE value="Kinda fixed verifier; removed Commons Codec dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kinda fixed verifier; removed Commons Codec dependency" />
+    <MESSAGE value="Removed Commons Codec jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Commons Codec jar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
