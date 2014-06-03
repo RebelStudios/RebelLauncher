@@ -11,6 +11,7 @@ Coming soon.
 XML Format
 ==========
 The XML format and parsing facilities are not finished yet, however, this is what we have so far:
+
 packInfo.xml
 
         <packInfo>
@@ -26,6 +27,7 @@ packInfo.xml
 			<!-- Branch of the pack (unstable, alpha, beta, release) -->
 			<branch>Unstable</branch>
 		</packInfo>
+
 mods.xml
 
 	<mods>
