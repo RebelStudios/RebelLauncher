@@ -27,14 +27,14 @@ public class Verifier {
 
             byte[] bytes = new byte[1024];
 
-            int nread = 0;
-            while ((nread = fis.read(bytes)) != -1) {
-                md.update(bytes, 0, nread);
+            int i = 0;
+            while ((i = fis.read(bytes)) != -1) {
+                md.update(bytes, 0, i);
             }
 
             byte[] digestBytes = md.digest();
 
-            for (int i = 0; i < digestBytes.length; i++) {
+            for (int j = 0; j < digestBytes.length; j++) {
                 hashBuffer.append(Integer.toString((digestBytes[i] & 0xff) + 0x100, 16).substring(1));
             }
 
