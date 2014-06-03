@@ -10,6 +10,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.UnknownHostException;
 import java.nio.file.Files;
+import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
 import static org.apache.commons.io.FileUtils.copyURLToFile;
@@ -34,7 +35,7 @@ public class Downloader {
         File dest;
         int i = 0;
         while (i < resource.resources.size()) {
-            dest = new File("C:\\Users\\misterti.me\\Desktop\\XML\\assets\\" + resource.resources.get(i).file.replaceAll("/", File.separator));
+            dest = new File("C:\\Users\\misterti.me\\Desktop\\XML\\assets\\" + resource.resources.get(i).file.replaceAll("/", "\\\\"));
 
             System.out.println("[Install Assets] Downloading http://s3.amazonaws.com/MinecraftResources/" + resource.resources.get(i).file);
             downloadFile(new URL("http://s3.amazonaws.com/MinecraftResources/"
@@ -54,6 +55,7 @@ public class Downloader {
      */
 
     public static void downloadFile(URL url, File dest, String hash) {
+//        TODO: Self sufficiency; remove Commons IO dependencies
         try {
             if (url.getFile().contains(".")) {
                 copyURLToFile(url, dest);
@@ -65,6 +67,8 @@ public class Downloader {
             System.out.println("Failed to download requested file! Are you connected to the internet?");
         } catch (IOException e) {
             System.out.println("We appear to have a problem.");
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
 

@@ -19,28 +19,34 @@ public class Verifier {
      * @throws IOException because there's a file
      */
     public static boolean verifyFile(File fileToVerify, String checksum) throws IOException {
-//        MessageDigest SHA1 = MessageDigest.getInstance("SHA1");
-//        FileInputStream fis = new FileInputStream(fileToVerify);
-//
-//        byte[] data = new byte[1024];
-//        int read = 0;
-//        while ((read = fis.read(data)) != -1) {
-//            SHA1.update(data, 0, read);
-//        }
-//        byte[] hashBytes = SHA1.digest();
-//
-//        StringBuffer sb = new StringBuffer();
-//        for (int i = 0; i < hashBytes.length; i++) {
-//            sb.append(Integer.toString((hashBytes[i] & 0xff) + 0x100, 16).substring(1));
-//        }
-//
-//        String fileHash = sb.toString();
-//
-//        return fileHash.equals(checksum);
+        StringBuffer hashBuffer = new StringBuffer();
 
-        FileInputStream fis = new FileInputStream(fileToVerify);
-        String hash = org.apache.commons.codec.digest.DigestUtils.shaHex(fis);
-        System.out.println("[Verifier] Expected hash " + checksum + " and got hash " + hash);
-        return hash.equals(checksum);
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-1");
+            FileInputStream fis = new FileInputStream(fileToVerify);
+
+            byte[] bytes = new byte[1024];
+
+            int nread = 0;
+            while ((nread = fis.read(bytes)) != -1) {
+                md.update(bytes, 0, nread);
+            }
+
+            byte[] digestBytes = md.digest();
+
+            for (int i = 0; i < digestBytes.length; i++) {
+                hashBuffer.append(Integer.toString((digestBytes[i] & 0xff) + 0x100, 16).substring(1));
+            }
+
+            if (fis != null) {
+                fis.close();
+            }
+
+            System.out.println("[Verifier] Expected checksum " + checksum + " and got checksum " + hashBuffer.toString());
+        } catch (NoSuchAlgorithmException e) {
+            System.out.println("Uh, no such algorithm. Did someone derp?");
+            e.printStackTrace();
+        }
+        return hashBuffer.toString().equals(checksum);
     }
 }
