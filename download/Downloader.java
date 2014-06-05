@@ -1,17 +1,17 @@
 package download;
 
+import parsers.XMLParser;
 import parsers.classmodel.xml.Resource;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import java.io.*;
-import java.net.HttpURLConnection;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
-import java.net.URLConnection;
 import java.net.UnknownHostException;
 import java.nio.file.Files;
-import java.security.NoSuchAlgorithmException;
-import java.util.Scanner;
 
 import static org.apache.commons.io.FileUtils.copyURLToFile;
 
@@ -20,9 +20,15 @@ import static org.apache.commons.io.FileUtils.copyURLToFile;
  */
 public class Downloader {
     public static InputStream getRemoteModXML(URL url) throws IOException {
-        URLConnection con = url.openConnection();
-        return con.getInputStream();
+        return url.openConnection().getInputStream();
+    }
 
+    public static void installMods(File where, File xml) {
+        try {
+            XMLParser.parseMods(xml);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void installResources() throws JAXBException, IOException {

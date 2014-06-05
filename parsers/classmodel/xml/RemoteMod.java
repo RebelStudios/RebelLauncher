@@ -4,7 +4,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.io.File;
 
 /**
  * Created by misterti.me on 5/27/2014.
@@ -12,24 +11,27 @@ import java.io.File;
 @XmlRootElement(name = "mod")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RemoteMod {
-    @XmlElement(name = "name")
+    @XmlElement(name = "name", required = true)
     public String name;
 
-    @XmlElement(name = "file")
+    @XmlElement(name = "file", required = true)
     public String file;
 
-    @XmlElement(name = "SHA")
+    @XmlElement(name = "SHA", required = true)
     public String SHAHash;
 
-    @XmlElement(name = "modVersion")
+    @XmlElement(name = "modVersion", required = true)
     public String modVersion;
 
-    @XmlElement(name = "MC")
+    @XmlElement(name = "MC", required = true)
     public String MC;
 
-    @XmlElement(name = "forgeVersion")
+    @XmlElement(name = "forgeVersion", required = true)
     public String forgeVersion;
 
-    @XmlElement(name = "branch")
+    @XmlElement(name = "branch", required = true)
     public String branch;
+
+    @XmlElement(name = "type", required = true)
+    public String type;
 }

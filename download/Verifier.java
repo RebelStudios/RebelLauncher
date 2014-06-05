@@ -2,7 +2,6 @@ package download;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -24,12 +23,11 @@ public class Verifier {
 //        TODO: Fix this. It's weird. The checksums aren't even the same length.
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-1");
-            FileInputStream fis = new FileInputStream(fileToVerify);
 
             byte[] bytes = new byte[1024];
 
             int i = 0;
-            while ((i = fis.read(bytes)) != -1) {
+            while ((i = (new FileInputStream(fileToVerify)).read(bytes)) != -1) {
                 md.update(bytes, 0, i);
             }
 
@@ -37,8 +35,6 @@ public class Verifier {
             for (int j = 0; j < md.digest().length; j++) {
                 hashBuffer.append(Integer.toString((md.digest()[j] & 0xff) + 0x100, 16).substring(1));
             }
-
-            fis.close();
 
             System.out.println("[Verifier] Expected checksum " + checksum + " and got checksum " + hashBuffer.toString());
         } catch (NoSuchAlgorithmException e) {

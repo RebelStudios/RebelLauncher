@@ -12,7 +12,7 @@ public class Mod {
     @XmlElement(name="mod")
     public ArrayList<Mod> mods = new ArrayList();
 
-    public ModType type;
+    public ModType modType;
 
     @XmlAttribute(name = "xml")
     public String xml;
@@ -22,5 +22,8 @@ public class Mod {
 
     @XmlAttribute(name = "permissions")
     public String permissions;
+
+    @XmlAttribute(name = "type")
+    public String type;
 
 }
