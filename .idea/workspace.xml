@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="129456d7-99c4-4848-a8c1-504cf49fda11" name="Default" comment="Optimized imports; half-finished mods installer">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download/Downloader.java" afterPath="$PROJECT_DIR$/download/Downloader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsers/classmodel/xml/Mod.java" afterPath="$PROJECT_DIR$/parsers/classmodel/xml/Mod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsers/classmodel/xml/ModType.java" afterPath="$PROJECT_DIR$/parsers/classmodel/xml/ModType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsers/classmodel/xml/PackInfo.java" afterPath="$PROJECT_DIR$/parsers/classmodel/xml/PackInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsers/classmodel/xml/RemoteMod.java" afterPath="$PROJECT_DIR$/parsers/classmodel/xml/RemoteMod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsers/classmodel/xml/Resource.java" afterPath="$PROJECT_DIR$/parsers/classmodel/xml/Resource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download/Verifier.java" afterPath="$PROJECT_DIR$/download/Verifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsers/XMLParser.java" afterPath="$PROJECT_DIR$/parsers/XMLParser.java" />
+    <list default="true" id="129456d7-99c4-4848-a8c1-504cf49fda11" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RebelLauncher.iws" />
@@ -523,7 +515,11 @@
       <created>1401826446142</created>
       <updated>1401826446142</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Optimized imports; half-finished mods installer">
+      <created>1401987620330</created>
+      <updated>1401987620330</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -551,7 +547,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -560,7 +556,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32929516" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
