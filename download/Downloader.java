@@ -26,6 +26,13 @@ public class Downloader {
     public static void installMods(File where, File xml) {
         try {
             XMLParser.parseMods(xml);
+
+            int i = 0;
+            while (i  < XMLParser.mod.mods.size()) {
+                downloadFile(new URL(XMLParser.remoteMods.get(i).file), new File(where.toString()), XMLParser.remoteMods.get(i).SHAHash);
+
+                i++;
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
