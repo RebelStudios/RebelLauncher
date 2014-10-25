@@ -1,21 +1,18 @@
-package main;
+package main
 
-import download.Downloader;
-import download.Verifier;
-import parsers.XMLParser;
-
-import javax.xml.bind.JAXBException;
-import java.io.File;
+import download.Downloader
 
 /**
  * Created by misterti.me on 5/26/2014.
+ *
+ * Ported to Groovy by Kepler Sticka-Jones on 10/24/2014.
  */
-public class Main {
-    public static void main(String args[]) throws Exception {
-        File f = new File("C:\\Users\\misterti.me\\Desktop\\XML\\mods.xml");
-        File g = new File("C:\\Users\\misterti.me\\Desktop\\XML\\IC2-2.1.477.jar");
+class Main {
+    static void main(String[] args) throws Exception {
+        File f = new File("C:\\Users\\misterti.me\\Desktop\\XML\\mods.xml")
+        File g = new File("C:\\Users\\misterti.me\\Desktop\\XML\\IC2-2.1.477.jar")
 
-        Downloader.installResources();
-//        XMLParser.parseMods(f);
+        Downloader.installResources()
+        //XMLParser.parseMods(f)
     }
 }
