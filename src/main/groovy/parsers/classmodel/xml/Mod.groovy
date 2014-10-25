@@ -1,7 +1,6 @@
 package parsers.classmodel.xml
 
 import javax.xml.bind.annotation.*
-import java.util.ArrayList
 
 /**
  * Created by misterti.me on 5/26/2014.

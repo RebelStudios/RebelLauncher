@@ -6,11 +6,6 @@ import parsers.classmodel.xml.Resource
 import javax.xml.bind.JAXBContext
 import javax.xml.bind.JAXBException
 import javax.xml.bind.Unmarshaller
-import java.io.File
-import java.io.IOException
-import java.io.InputStream
-import java.net.URL
-import java.net.UnknownHostException
 import java.nio.file.Files
 
 import static org.apache.commons.io.FileUtils.copyURLToFile

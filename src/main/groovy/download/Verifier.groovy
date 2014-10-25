@@ -1,8 +1,5 @@
 package download
 
-import java.io.File
-import java.io.FileInputStream
-import java.io.IOException
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 
