@@ -1,33 +1,35 @@
-package parsers.classmodel.xml;
+package parsers.classmodel.xml
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import java.util.ArrayList;
+import javax.xml.bind.annotation.XmlAccessType
+import javax.xml.bind.annotation.XmlAccessorType
+import javax.xml.bind.annotation.XmlElement
+import javax.xml.bind.annotation.XmlRootElement
+import java.util.ArrayList
 
 /**
  * Created by misterti.me on 5/27/2014.
+ *
+ * Ported to Groovy by Kepler Sticka-Jones on 10/24/2014.
  */
 @XmlRootElement(name = "ListBucketResult")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Resource {
+class Resource {
     @XmlElement(name = "Key")
-    public String file;
+    String file
 
     @XmlElement(name = "LastModified")
-    public String lastModified;
+    String lastModified
 
     @XmlElement(name = "ETag")
-    public String hash;
+    String hash
 
     @XmlElement(name = "Size")
-    public int size;
+    int size
 
     @XmlElement(name = "StorageClass")
-    public String storageClass;
+    String storageClass
 
     @XmlElement(name = "Contents")
-    public ArrayList<Resource> resources = null;
+    ArrayList<Resource> resources = null
 
 }
