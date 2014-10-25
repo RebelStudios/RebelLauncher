@@ -1,37 +1,39 @@
-package parsers.classmodel.xml;
+package parsers.classmodel.xml
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlAccessType
+import javax.xml.bind.annotation.XmlAccessorType
+import javax.xml.bind.annotation.XmlElement
+import javax.xml.bind.annotation.XmlRootElement
 
 /**
  * Created by misterti.me on 5/27/2014.
+ *
+ * Ported to Groovy by Kepler Sticka-Jones on 10/24/2014.
  */
 @XmlRootElement(name = "mod")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class RemoteMod {
+class RemoteMod {
     @XmlElement(name = "name", required = true)
-    public String name;
+    String name
 
     @XmlElement(name = "file", required = true)
-    public String file;
+    String file
 
     @XmlElement(name = "SHA", required = true)
-    public String SHAHash;
+    String SHAHash
 
     @XmlElement(name = "modVersion", required = true)
-    public String modVersion;
+    String modVersion
 
     @XmlElement(name = "MC", required = true)
-    public String MC;
+    String MC
 
     @XmlElement(name = "forgeVersion", required = true)
-    public String forgeVersion;
+    String forgeVersion
 
     @XmlElement(name = "branch", required = true)
-    public String branch;
+    String branch
 
     @XmlElement(name = "type", required = true)
-    public String type;
+    String type
 }
